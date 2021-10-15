@@ -5,6 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Space+Mono:wght@400;700&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -341,10 +342,35 @@ template {
   display: none;
 }
 
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/space-mono-v6-latin-regular.woff2") format("woff2"), url("../fonts/space-mono-v6-latin-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../fonts/space-mono-v6-latin-700.woff2") format("woff2"), url("../fonts/space-mono-v6-latin-700.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Lexend Deca';
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/lexend-deca-v10-latin-regular.woff2") format("woff2"), url("../fonts/lexend-deca-v10-latin-regular.woff") format("woff");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: "Arial",sans-serif;
+  font-family: "Space Mono", "Lexend Deca" "Arial",sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -355,11 +381,11 @@ body {
 }
 
 .container {
-  max-width: px;
+  max-width: 1460px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: px;
-  padding-right: px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .visually-hidden {
@@ -373,13 +399,231 @@ body {
   clip: rect(0 0 0 0);
 }
 
-img {
-  width: 100%;
-  height: auto;
-}
-
-ul, div {
+ul {
   margin: 0;
   padding: 0;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 22px 165px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__menu {
+  display: none;
+}
+
+.header__logo {
+  display: block;
+  margin-right: 58px;
+}
+
+.header__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+}
+
+.header .nav {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .nav__item {
+  margin-left: 32px;
+}
+
+.header .nav__item:first-child {
+  margin-left: 0;
+}
+
+.header .nav__link {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-family: "Space Mono";
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 25px;
+  color: #939CAA;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.header .nav__link:hover {
+  color: #fcb72b;
+}
+
+.header__btn {
+  margin: 0;
+  margin-left: auto;
+  padding: 14px 39px;
+  background-color: #fcb72b;
+  border: 1px solid #fcb72b;
+}
+
+.header__btn__link {
+  text-decoration: none;
+  font-family: "Space Mono";
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 25px;
+  color: #fff;
+}
+
+.header__btn:hover {
+  background-color: #fff;
+  border: 1px solid #fcb72b;
+}
+
+.header__btn:hover a {
+  font-family: "Space Mono";
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 25px;
+  color: #fcb72b;
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    padding: 34px 40px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .header {
+    position: relative;
+  }
+  .header__logo {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin: 0;
+    width: 75px;
+    height: 20px;
+  }
+  .header .nav {
+    display: none;
+    max-width: 256px;
+    padding-top: 55px;
+    padding-left: 32px;
+    padding-bottom: 350px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #333A44;
+  }
+  .header .nav__item {
+    margin: 0;
+    margin-bottom: 24px;
+  }
+  .header .nav__link {
+    font-family: "Space Mono";
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+    color: #E5ECF4;
+  }
+  .header__btn {
+    display: block;
+    position: absolute;
+    top: 526px;
+    left: 0;
+    padding: 14px 57px;
+    margin: 32px;
+  }
+  .header__menu {
+    display: block;
+    width: 19px;
+    height: 16px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    background-image: url(../../img/menu.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    cursor: pointer;
+    margin-right: 70px;
+  }
+  .header__menu--active {
+    background-image: url(../../img/menu-x.png);
+  }
+  .header__menu--active ~ .header__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header__menu--active ~ .header__btn {
+    display: block;
+  }
+}
+
+.hero {
+  padding: 153px 775px 153px 165px;
+  background-image: url(../../img/transparent.png), url(../../img/Bitmap.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero__box {
+  margin: 0;
+  max-width: 500px;
+}
+
+.hero__heading {
+  font-family: "Space Mono";
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 56px;
+  letter-spacing: -2.5px;
+  color: #ffff;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.hero__text {
+  max-width: 405px;
+  font-family: "Lexend Deca";
+  text-align: left;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  color: #ffff;
+  margin: 0;
+  margin-left: 70px;
+  margin-bottom: 40px;
+}
+
+.hero__link {
+  text-decoration: none;
+  font-family: Space "Mono";
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 25px;
+  color: #ffff;
+}
+
+.hero__btn {
+  margin: 0;
+  padding: 14px 40px;
+  background-color: #fcb72b;
+  border: 1px solid #fcb72b;
+  margin-left: 70px;
 }
 /*# sourceMappingURL=main.css.map */
