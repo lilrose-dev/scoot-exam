@@ -1,0 +1,13 @@
+@mixin oppor-before($width, $height, $image){
+    content: "";
+    display: block;
+    width: $width;
+    height:$height;
+    background-image:$image;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: $main-yellow;
+    border-radius: 50%;
+    
+}

@@ -1,0 +1,102 @@
+.opportunity {
+    display: flex;
+    list-style-type: none;
+    padding-left: 165px;
+    padding-right: 165px;
+    padding-top: 87px;
+    margin-bottom: 386px;
+    position: relative;
+    
+    
+    &::before {
+        position: absolute;
+        top: 23%;
+        left: 0;
+        z-index: -1;
+        content: "";
+        display: block;
+        width: 974px;
+        height: 10px;
+        background-color: $main-dim-white;
+    }
+    
+    &__item {
+        display: flex;
+        flex-direction: column;
+        max-width: 350px;
+        text-align: left;
+        margin-right: 30px;
+        position: relative;
+        
+        &--1 {
+            &::before {
+                @include oppor-before($width:96px, $height:96px, $image: url(../../img/opporr-1.svg))
+            }
+            
+        }
+        &--2 {
+            &::before {
+                @include oppor-before($width:96px, $height:96px, $image: url(../../img/opporr-2.svg))
+            }
+            
+        }
+        &--3 {
+            &::before {
+                @include oppor-before($width:96px, $height:96px, $image: url(../../img/opporr-3.svg))
+            }
+            
+        }
+        
+    }
+    
+    &__heading {
+        margin: 0;
+        font-family: "Space Mono";
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 28px;
+        color: $main-dark;
+        margin-bottom: 27px;
+        
+    }
+    
+    &__text {
+        margin: 0;
+        font-family: "Lexend Deca";
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 25px;
+        color: $main-grey;
+        margin-bottom: 200px;
+    }
+}
+@media only screen and (max-width:768px) {
+    .opportunity {
+        max-width:573px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &::before {
+            transform: rotateY(4turn);
+        }
+        
+
+        &__item {
+
+            margin: 0;
+
+
+            &::before {
+                margin: 0;
+             
+            }
+        }
+
+        &__wrapper {
+            margin: 0;
+
+        }
+    }
+}

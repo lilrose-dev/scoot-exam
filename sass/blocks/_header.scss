@@ -47,7 +47,7 @@
             color: $main-grey;
             transition: all 0.5s ease;
             
-            &:hover {
+            &:active {
                 color: $main-yellow;
             }
             
@@ -73,7 +73,7 @@
         
         &:hover {
             background-color: #fff;
-            border: 1px solid $main-yellow;
+            border: 3px solid $main-yellow;
             
             & a {
                 font-family: "Space Mono";
@@ -109,6 +109,7 @@
         
         .nav {
             display: none;
+            z-index: 1;
             max-width: 256px;
             padding-top: 55px;
             padding-left: 32px;
@@ -135,7 +136,7 @@
         }
         
         &__btn {
-            display:block;
+            display:none;
             position: absolute;
             top: 526px;
             left: 0;
@@ -163,7 +164,7 @@
             &--active ~ .header__nav  {
                 display: flex;
             } 
-            &--active ~ .header__btn  {
+            &--active .header__btn  {
                 display: block;
             } 
             
