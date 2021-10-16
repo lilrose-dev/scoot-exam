@@ -1,0 +1,50 @@
+.city {
+    padding-left: 165px;
+    padding-right: 165px;
+    display: flex;
+    align-items: center;
+    
+    &__img{
+        border-radius: 50%;
+        margin-right: 220px;
+        
+    }
+    
+    &__heading {
+        font-family: "Space Mono";
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 48px;
+        color: $main-dark;
+        margin-bottom: 24px;
+        
+    }
+
+    &__text {
+        margin: 0;
+        font-family: "Lexend Deca";
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 25px;
+        color: $main-light-grey;  
+        margin-bottom: 40px; 
+    }
+
+    &__btn {
+        margin: 0;
+        border: none;
+        padding: 14px 44px;
+        background-color: $main-yellow;
+        border: 1px solid $main-yellow;
+        
+        & a {
+            text-decoration: none;
+            color: #ffff;
+            font-family: "Space Mono";
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 25px;
+            letter-spacing: 0px;   
+        }
+    }
+}

@@ -765,7 +765,7 @@ ul {
   padding-left: 165px;
   padding-right: 165px;
   padding-top: 87px;
-  margin-bottom: 386px;
+  margin-bottom: 100px;
   position: relative;
 }
 
@@ -895,6 +895,7 @@ ul {
   text-align: left;
   padding-left: 165px;
   padding-right: 165px;
+  margin-bottom: 226px;
 }
 
 .easy__left {
@@ -943,5 +944,58 @@ ul {
 .easy__img {
   border-radius: 50%;
   margin-left: 220px;
+}
+
+.city {
+  padding-left: 165px;
+  padding-right: 165px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.city__img {
+  border-radius: 50%;
+  margin-right: 220px;
+}
+
+.city__heading {
+  font-family: "Space Mono";
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 48px;
+  color: #495567;
+  margin-bottom: 24px;
+}
+
+.city__text {
+  margin: 0;
+  font-family: "Lexend Deca";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  color: #939CAA;
+  margin-bottom: 40px;
+}
+
+.city__btn {
+  margin: 0;
+  border: none;
+  padding: 14px 44px;
+  background-color: #fcb72b;
+  border: 1px solid #fcb72b;
+}
+
+.city__btn a {
+  text-decoration: none;
+  color: #ffff;
+  font-family: "Space Mono";
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0px;
 }
 /*# sourceMappingURL=main.css.map */
